@@ -1,0 +1,100 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #f0f0f0;
+    font-family: 'Playfair Display', serif; /* Fonte elegante similar à imagem */
+}
+
+.card-container {
+    width: 500px;
+    height: 600px;
+    background-color: #3e49b0; /* Azul do fundo */
+    position: relative;
+    overflow: hidden;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+}
+
+/* Efeito da imagem do personagem ao fundo */
+.background-character {
+    position: absolute;
+    bottom: 0; /* Cola na base */
+    left: 0;   /* Cola na esquerda */
+    width: 100%;
+    height: 100%;
+    
+    background-image: url('poseidon.png'); /* Verifique o nome do arquivo */
+    background-repeat: no-repeat;
+    
+    /* POSICIONAMENTO CRÍTICO: */
+    background-position: left bottom; /* Alinha na esquerda e embaixo */
+    background-size: contain; /* Ajusta o tamanho sem cortar a proporção */
+    
+    /* EFEITO VISUAL: */
+    opacity: 0.7; 
+    mix-blend-mode: screen; /* Tente 'screen' ou 'overlay' para o efeito azulado */
+    z-index: 1;
+};
+
+.content {
+    position: relative;
+    z-index: 2; /* Garante que o texto fique acima do desenho */
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    text-align: center;
+}
+
+h1 {
+    font-size: 2.8rem;
+    font-weight: 400;
+    letter-spacing: 2px;
+    margin-top: 10px;
+}
+
+.subtitle {
+    font-size: 0.9rem;
+    font-style: italic;
+    margin-top: 5px;
+    padding: 0 10px;
+}
+
+.product-image {
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.product-image img {
+    width: 250px; /* Tamanho do círculo central */
+    height: auto;
+    filter: drop-shadow(0 0 15px rgba(0,0,0,0.5));
+}
+
+footer {
+    text-align: right;
+    padding-bottom: 10px;
+}
+
+footer p {
+    font-size: 1.1rem;
+}
+
+.contact {
+    font-size: 1.6rem;
+    font-weight: bold;
+    margin-top: 5px;
+}
